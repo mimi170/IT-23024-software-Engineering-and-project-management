@@ -1,0 +1,34 @@
+package com;
+
+public class University {
+    private String uniName;
+    private int establishedYear;
+
+    // Constructor
+    public University(String uniName, int establishedYear) {
+        this.uniName = uniName;
+        this.establishedYear = establishedYear;
+    }
+
+    // Getter and Setter
+    public String getUniName() {
+        return uniName;
+    }
+
+    public void setUniName(String uniName) {
+        this.uniName = uniName;
+    }
+
+    public int getEstablishedYear() {
+        return establishedYear;
+    }
+
+    public void setEstablishedYear(int establishedYear) {
+        this.establishedYear = establishedYear;
+    }
+
+    // Method
+    public void info() {
+        System.out.println(uniName + " was established in " + establishedYear);
+    }
+}
