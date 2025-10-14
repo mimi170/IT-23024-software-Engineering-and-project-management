@@ -1,0 +1,27 @@
+package mainpack;
+
+import com.Human;
+import com.Music;
+import com.University;
+
+public class Main {
+    public static void main(String[] args) {
+        // Human
+        Human human = new Human("Alice", 25);
+        human.speak();
+        human.setAge(26);
+        System.out.println("Updated Age: " + human.getAge());
+
+        // Music
+        Music music = new Music("Shape of You", "Ed Sheeran");
+        music.playSong();
+        music.setSongName("Perfect");
+        System.out.println("Now playing: " + music.getSongName());
+
+        // University
+        University uni = new University("Mawlana Bhashani Science and Technology University", 1999);
+        uni.info();
+        uni.setEstablishedYear(2000);
+        System.out.println("Updated Year: " + uni.getEstablishedYear());
+    }
+}
