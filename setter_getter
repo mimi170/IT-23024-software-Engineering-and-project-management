@@ -1,0 +1,19 @@
+class FavouriteFood4 {
+    private String food;
+
+    // Setter method
+    void setFood(String f) {
+        food = f;
+    }
+
+    // Getter method
+    String getFood() {
+        return food;
+    }
+
+    public static void main(String[] args) {
+        FavouriteFood4 obj = new FavouriteFood4();
+        obj.setFood("Biriyani");
+        System.out.println("My favourite food is: " + obj.getFood());
+    }
+}
