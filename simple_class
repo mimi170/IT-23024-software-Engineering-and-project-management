@@ -1,0 +1,8 @@
+class FavouriteFood1 {
+    String food = "Biriyani";
+
+    public static void main(String[] args) {
+        FavouriteFood1 obj = new FavouriteFood1();
+        System.out.println("My favourite food is: " + obj.food);
+    }
+}
