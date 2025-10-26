@@ -1,0 +1,26 @@
+import java.util.Vector;
+
+public class VectorDemo {
+    public static void main(String[] args) {
+        // Create a Vector with initial capacity of 10
+        Vector<String> vec = new Vector<>(10);
+
+        // Add 10 elements (filling the initial capacity)
+        for (int i = 1; i <= 10; i++) {
+            vec.add("IT2300" + i);
+        }
+
+        // Show current capacity and size
+        int capacityBefore = vec.capacity();
+        System.out.println("Initial capacity: " + capacityBefore);
+        System.out.println("Size before adding extra element: " + vec.size());
+
+        // Add one more element — this will exceed the initial capacity
+        vec.add("IT23011");
+
+        // Show new capacity after exceeding
+        int capacityAfter = vec.capacity();
+        System.out.println("Size after exceeding: " + vec.size());
+        System.out.println("New capacity (increased by 100%): " + capacityAfter);
+    }
+}
