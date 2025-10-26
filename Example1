@@ -1,0 +1,35 @@
+import java.util.ArrayList;
+import java.lang.reflect.Field;
+
+public class ArrayListDemo {
+    public static void main(String[] args) throws Exception {
+        // Create an ArrayList with initial capacity of 10
+        ArrayList<String> list = new ArrayList<>(10);
+
+        // Add 10 elements (filling the initial capacity)
+        for (int i = 1; i <= 10; i++) {
+            list.add("IT2300" + i);
+        }
+
+        // Get the internal capacity before exceeding
+        int capacityBefore = getCapacity(list);
+        System.out.println("Initial capacity: " + capacityBefore);
+        System.out.println("Size before adding extra element: " + list.size());
+
+        // Add one more element — this will exceed the initial capacity
+        list.add("IT23011");
+
+        // Check the new capacity after exceeding
+        int capacityAfter = getCapacity(list);
+        System.out.println("Size after exceeding: " + list.size());
+        System.out.println("New capacity (increased by 50%): " + capacityAfter);
+    }
+
+    // Helper method to check the internal capacity of ArrayList using reflection
+    private static int getCapacity(ArrayList<?> list) throws Exception {
+        Field dataField = ArrayList.class.getDeclaredField("elementData");
+        dataField.setAccessible(true);
+        Object[] elementData = (Object[]) dataField.get(list);
+        return elementData.length;
+    }
+}
