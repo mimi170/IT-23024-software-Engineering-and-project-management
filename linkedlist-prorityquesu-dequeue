@@ -1,0 +1,63 @@
+1. LinkedList
+
+Description: A list where each element (node) points to the next (and maybe previous) element.
+
+When to use:
+
+Frequent insertions or deletions in the middle of the list.
+
+You don’t need fast random access (accessing the 100th element is slow, O(n)).
+
+Useful for stacks and queues if you want dynamic sizing.
+
+Example use-case:
+
+Implementing a queue where elements are added at the end and removed from the start.
+
+A music playlist where songs can be added/removed anywhere.
+
+2. PriorityQueue
+
+Description: A queue where each element has a priority, and the element with the highest (or lowest) priority is served first.
+
+When to use:
+
+You need automatic ordering by priority.
+
+Frequent insertion and retrieval of the “next most important” element.
+
+Accessing arbitrary elements is not efficient; you can only get the top-priority element efficiently.
+
+Example use-case:
+
+Task scheduler where urgent tasks run first.
+
+Dijkstra’s algorithm for shortest paths.
+
+3. Deque (Double-Ended Queue)
+
+Description: A queue where elements can be added or removed from both ends.
+
+When to use:
+
+You need a flexible queue: sometimes FIFO, sometimes LIFO.
+
+Efficient push/pop from both front and back.
+
+Can implement stack or queue behavior.
+
+Example use-case:
+
+Sliding window problems in algorithms.
+
+Undo/redo operations in applications.
+
+Browser history navigation.
+
+✅ Quick Comparison Table
+Feature	LinkedList	PriorityQueue	Deque
+Access middle elements	O(n)	Not supported	O(n)
+Insert/delete anywhere	O(1) if node reference known	O(log n)	O(1) at ends
+Automatic ordering	No	Yes (by priority)	No
+FIFO/LIFO support	Yes	Partial (priority-based)	Yes (both ends)
+Best for	Dynamic lists, frequent middle ops	Task scheduling, algorithm queues	Sliding windows, flexible queues, stack/queue mix
