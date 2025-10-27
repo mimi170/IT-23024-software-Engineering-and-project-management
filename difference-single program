@@ -1,0 +1,53 @@
+import java.util.*;
+
+public class DataStructureDemo {
+    public static void main(String[] args) {
+
+        // LinkedList
+        LinkedList<String> linkedList = new LinkedList<>();
+        linkedList.add("A");
+        linkedList.add("B");
+        linkedList.add(1, "C"); // Insert in middle
+        System.out.println("LinkedList: " + linkedList);
+
+        // PriorityQueue
+        PriorityQueue<Integer> pq = new PriorityQueue<>();
+        pq.add(50);
+        pq.add(10);
+        pq.add(30);
+        System.out.println("PriorityQueue (poll in order):");
+        while (!pq.isEmpty()) {
+            System.out.print(pq.poll() + " "); // Always smallest first
+        }
+        System.out.println();
+
+        // Deque
+        Deque<String> deque = new ArrayDeque<>();
+        deque.addFirst("X");
+        deque.addLast("Y");
+        System.out.println("Deque: " + deque);
+        System.out.println("Remove First: " + deque.removeFirst());
+        System.out.println("Remove Last: " + deque.removeLast());
+
+        // HashMap
+        HashMap<Integer, String> hashMap = new HashMap<>();
+        hashMap.put(2, "Two");
+        hashMap.put(1, "One");
+        hashMap.put(3, "Three");
+        System.out.println("HashMap (unordered): " + hashMap);
+
+        // TreeMap
+        TreeMap<Integer, String> treeMap = new TreeMap<>();
+        treeMap.put(2, "Two");
+        treeMap.put(1, "One");
+        treeMap.put(3, "Three");
+        System.out.println("TreeMap (sorted by key): " + treeMap);
+
+        // HashSet
+        HashSet<String> hashSet = new HashSet<>();
+        hashSet.add("Apple");
+        hashSet.add("Banana");
+        hashSet.add("Apple"); // Duplicate ignored
+        System.out.println("HashSet (unique elements): " + hashSet);
+    }
+}
