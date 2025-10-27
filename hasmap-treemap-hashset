@@ -1,0 +1,61 @@
+1. HashMap
+
+Description: A key-value store implemented using a hash table. Keys are unique; values can be duplicated.
+
+When to use:
+
+You need fast insertion, deletion, and lookup (O(1) average).
+
+Order of elements doesn’t matter.
+
+You want to map one thing to another, e.g., student ID → student name.
+
+Example use-case:
+
+Counting word frequencies in a text.
+
+Caching data by key.
+
+2. TreeMap
+
+Description: A key-value store implemented as a red-black tree. Keys are unique and automatically sorted.
+
+When to use:
+
+You need sorted keys.
+
+You need operations like finding the smallest/largest key, or ranges.
+
+Slightly slower than HashMap: O(log n) for insert, delete, lookup.
+
+Example use-case:
+
+Leaderboards where you want scores sorted.
+
+Maintaining a schedule sorted by time.
+
+3. HashSet
+
+Description: A set implemented using a hash table. Stores unique elements only, no duplicates.
+
+When to use:
+
+You need to store unique items.
+
+Fast add, remove, and contains operations (O(1) average).
+
+Order doesn’t matter.
+
+Example use-case:
+
+Tracking which users have logged in today.
+
+Removing duplicates from a list.
+
+✅ Quick Comparison Table
+Feature	HashMap	TreeMap	HashSet
+Stores	Key → Value	Key → Value	Only values
+Order	No	Sorted by key	No
+Duplicates	Keys unique, values can duplicate	Keys unique, values can duplicate	Unique only
+Access time	O(1) avg	O(log n)	O(1) avg
+Use-case	Fast key-value mapping	Sorted key-value mapping	Unique collection
