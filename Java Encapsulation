@@ -1,0 +1,85 @@
+// Encapsulation Example in Java
+// Author: customer1
+// Date: 08-Nov-2025
+
+// The idea of encapsulation is to hide sensitive data using private attributes
+// and provide access through public getter and setter methods.
+
+class BankAccount {
+
+    // Private fields: these can't be accessed directly from outside the class
+    private String accountHolderName;
+    private double balance;
+
+    // Constructor to initialize object
+    public BankAccount(String accountHolderName, double balance) {
+        this.accountHolderName = accountHolderName;
+        this.balance = balance;
+    }
+
+    // Getter method - to safely access the private variable
+    public String getAccountHolderName() {
+        return accountHolderName;
+    }
+
+    // Setter method - to safely modify the private variable
+    public void setAccountHolderName(String accountHolderName) {
+        // We can add validation here if needed
+        this.accountHolderName = accountHolderName;
+    }
+
+    // Getter for balance
+    public double getBalance() {
+        return balance;
+    }
+
+    // Setter for balance with validation
+    public void setBalance(double balance) {
+        if (balance >= 0) {
+            this.balance = balance;
+        } else {
+            System.out.println("Balance cannot be negative!");
+        }
+    }
+
+    // Method to deposit money
+    public void deposit(double amount) {
+        if (amount > 0) {
+            balance += amount;
+            System.out.println(amount + " deposited successfully.");
+        } else {
+            System.out.println("Deposit amount must be positive.");
+        }
+    }
+
+    // Method to withdraw money
+    public void withdraw(double amount) {
+        if (amount > 0 && amount <= balance) {
+            balance -= amount;
+            System.out.println(amount + " withdrawn successfully.");
+        } else {
+            System.out.println("Invalid withdraw amount!");
+        }
+    }
+}
+
+// Main class to test Encapsulation example
+public class Main {
+    public static void main(String[] args) {
+
+        // Creating an object of BankAccount
+        BankAccount acc = new BankAccount("Rahim Uddin", 5000);
+
+        // Accessing data through getter methods
+        System.out.println("Account Holder: " + acc.getAccountHolderName());
+        System.out.println("Current Balance: " + acc.getBalance());
+
+        // Trying deposit and withdraw
+        acc.deposit(1500);
+        acc.withdraw(2000);
+
+        // Updating account holder name safely
+        acc.setAccountHolderName("Karim Uddin");
+        System.out.println("Updated Name: " + acc.getAccountHolderName());
+    }
+}
