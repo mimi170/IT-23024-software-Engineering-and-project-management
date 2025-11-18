@@ -1,0 +1,14 @@
+import java.util.ArrayList;
+import java.util.Collections;
+
+// Program to find the k-th smallest element in an ArrayList
+public class KthSmallest {
+
+    public static int findKthSmallest(ArrayList<Integer> list, int k) {
+        // Sort the ArrayList
+        Collections.sort(list);
+
+        // k-th smallest element is now at index k-1
+        return list.get(k - 1);
+    }
+}

@@ -1,0 +1,16 @@
+import java.util.TreeMap;
+
+// Count the frequency of each word from a given text
+public class WordFrequencyMap {
+
+    public static TreeMap<String, Integer> countWords(String text) {
+        TreeMap<String, Integer> freq = new TreeMap<>();
+
+        String[] words = text.toLowerCase().split(" ");
+
+        for (String w : words) {
+            freq.put(w, freq.getOrDefault(w, 0) + 1);
+        }
+        return freq;
+    }
+}

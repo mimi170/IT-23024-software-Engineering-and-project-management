@@ -1,0 +1,30 @@
+import java.util.TreeMap;
+
+// Student class for storing details
+class Student {
+    String name;
+    double cgpa;
+
+    Student(String name, double cgpa) {
+        this.name = name;
+        this.cgpa = cgpa;
+    }
+
+    public String toString() {
+        return name + " (CGPA: " + cgpa + ")";
+    }
+}
+
+public class StudentDetailsMap {
+
+    public static TreeMap<Integer, Student> getStudentMap() {
+
+        TreeMap<Integer, Student> map = new TreeMap<>();
+
+        map.put(101, new Student("Rahim", 3.75));
+        map.put(102, new Student("Karim", 3.90));
+        map.put(103, new Student("Sumaiya", 3.95));
+
+        return map;
+    }
+}

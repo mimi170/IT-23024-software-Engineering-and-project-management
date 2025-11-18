@@ -1,0 +1,9 @@
+import java.util.LinkedList;
+
+// Program to check if two LinkedLists are equal
+public class LinkedListEquality {
+
+    public static boolean areEqual(LinkedList<Integer> a, LinkedList<Integer> b) {
+        return a.equals(b);
+    }
+}

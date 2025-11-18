@@ -1,0 +1,20 @@
+import java.util.PriorityQueue;
+
+// Queue using PriorityQueue
+public class PriorityQueueQueue {
+
+    PriorityQueue<Integer> pq;
+
+    public PriorityQueueQueue() {
+        // Natural ordering = smallest comes first
+        pq = new PriorityQueue<>();
+    }
+
+    public void enqueue(int x) {
+        pq.add(x);
+    }
+
+    public int dequeue() {
+        return pq.poll();
+    }
+}

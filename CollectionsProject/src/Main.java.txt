@@ -1,0 +1,43 @@
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+
+        // 1) Kth Smallest Element
+        ArrayList<Integer> nums = new ArrayList<>(Arrays.asList(7, 3, 9, 1, 4));
+        System.out.println("3rd Smallest = " +
+                KthSmallest.findKthSmallest(nums, 3));
+
+        // 2) Word Frequency
+        System.out.println("\nWord Frequency:");
+        System.out.println(WordFrequencyMap.countWords("i love java java is fun"));
+
+        // 3) Queue using PriorityQueue
+        PriorityQueueQueue pqQueue = new PriorityQueueQueue();
+        pqQueue.enqueue(5);
+        pqQueue.enqueue(2);
+        pqQueue.enqueue(8);
+        System.out.println("\nQueue Dequeue = " + pqQueue.dequeue());
+
+        // Stack using PriorityQueue
+        PriorityQueueStack pqStack = new PriorityQueueStack();
+        pqStack.push(4);
+        pqStack.push(9);
+        pqStack.push(1);
+        System.out.println("Stack Pop = " + pqStack.pop());
+
+        // 4) Student Map
+        System.out.println("\nStudents:");
+        System.out.println(StudentDetailsMap.getStudentMap());
+
+        // 5) LinkedList equality
+        LinkedList<Integer> list1 = new LinkedList<>(Arrays.asList(1, 2, 3));
+        LinkedList<Integer> list2 = new LinkedList<>(Arrays.asList(1, 2, 3));
+        System.out.println("\nLinkedList Equal? " +
+                LinkedListEquality.areEqual(list1, list2));
+
+        // 6) Employee Department Map
+        System.out.println("\nEmployees:");
+        System.out.println(EmployeeDepartmentMap.getEmployeeMap());
+    }
+}
