@@ -1,0 +1,21 @@
+# Birthday Manager (JavaFX + JDBC)
+
+## Features
+- Add, update, delete birthday
+- Bangla UI
+- Search by name or month
+- Shows upcoming birthdays
+
+## Technology
+- JavaFX
+- JDBC
+- MySQL
+
+## How to run
+1. Import project
+2. Add MySQL connector in lib/
+3. Create database from SQL file
+4. Run Main.java
+
+## Screenshots
+(Insert screenshots here)

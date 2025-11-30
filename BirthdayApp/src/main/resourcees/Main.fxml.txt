@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="birthdayapp.BirthdayController">
+
+    <top>
+        <HBox spacing="10" style="-fx-padding:10;">
+            <Label text="নাম বা মাস দিয়ে খোঁজ:"/>
+            <TextField fx:id="searchField"/>
+            <Button text="রিফ্রেশ" onAction="#refresh"/>
+        </HBox>
+    </top>
+
+    <center>
+        <TableView fx:id="table">
+            <columns>
+                <TableColumn fx:id="colName" text="নাম" prefWidth="200"/>
+                <TableColumn fx:id="colDate" text="জন্মদিন" prefWidth="150"/>
+            </columns>
+        </TableView>
+    </center>
+
+    <bottom>
+        <HBox spacing="10" style="-fx-padding:10;">
+            <Button text="যোগ করুন" onAction="#add"/>
+            <Button text="ডিলিট" onAction="#delete"/>
+        </HBox>
+    </bottom>
+
+</BorderPane>
