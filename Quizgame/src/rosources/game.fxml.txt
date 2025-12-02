@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="quizgame.GameController">
+
+    <top>
+        <VBox spacing="10" alignment="CENTER">
+            <Label text="Quiz Game" style="-fx-font-size: 24px; -fx-font-weight: bold;"/>
+            <HBox spacing="10" alignment="CENTER">
+                <Label text="Name:"/>
+                <TextField fx:id="nameField" promptText="Enter your name"/>
+                <Button fx:id="startButton" text="Start Game" onAction="#startGame"/>
+            </HBox>
+        </VBox>
+    </top>
+
+    <center>
+        <VBox alignment="CENTER" spacing="15">
+
+            <Label fx:id="questionLabel" text="Question will appear here" style="-fx-font-size: 18px;"/>
+
+            <VBox spacing="10">
+                <RadioButton fx:id="opt1" text="Option 1"/>
+                <RadioButton fx:id="opt2" text="Option 2"/>
+                <RadioButton fx:id="opt3" text="Option 3"/>
+                <RadioButton fx:id="opt4" text="Option 4"/>
+            </VBox>
+
+        </VBox>
+    </center>
+
+    <bottom>
+        <HBox spacing="20" padding="10" alignment="CENTER">
+            <Label fx:id="timerLabel" text="Time: 20"/>
+            <Label fx:id="scoreLabel" text="Score: 0"/>
+            <Button fx:id="nextButton" text="Next" onAction="#nextQuestion"/>
+            <Button fx:id="exitButton" text="Exit" onAction="#exitGame"/>
+        </HBox>
+    </bottom>
+
+</BorderPane>
