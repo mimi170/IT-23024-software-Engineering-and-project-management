@@ -1,0 +1,27 @@
+1) When to Use Interface vs Abstract Class — Story + Code Explanation
+Story: “The Robot World”
+
+In a futuristic world called RoboLand, robots are created for different purposes: delivery, security, cleaning, etc.
+
+There were two important systems for making a robot:
+
+A) Interface → The Rule Book (Contract)
+
+Every robot had to follow a strict rule book called RoboRules.
+
+The rule book did not contain any implementation.
+It only said:
+
+“Every robot MUST implement these actions.”
+
+✔ Interfaces define what must be done, not how to do it.
+
+B) Abstract Class → The Half-Built Robot Model
+
+There was also a blueprint called RoboModel.
+
+Some behaviors were already implemented (like charging).
+
+Some behaviors must be implemented by the child robot (like movement).
+
+✔ Abstract classes give partial implementation.

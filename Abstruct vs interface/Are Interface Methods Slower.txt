@@ -1,0 +1,74 @@
+2) Are Interface Methods Slower? Explanation + Example
+Short Answer
+
+Modern Java (Java 8+) makes interface method calls almost as fast as abstract or concrete method calls.
+
+Performance difference is tiny and usually irrelevant.
+
+But:
+
+Calling a method using an interface reference is slightly slower
+because JVM must find the correct implementation at runtime.
+
+Example:
+
+SpeedTest iRef = new RealSpeed();   // interface reference (slightly slower)
+AbsSpeed absRef = new RealSpeed();  // abstract class reference (faster)
+RealSpeed realRef = new RealSpeed(); // concrete reference (fastest)
+
+
+It’s not because of the interface itself—
+it’s because of the reference type used for the call.
+
+New Example Code for Performance
+interface SpeedTest {
+    int calc();
+}
+
+abstract class AbsSpeed implements SpeedTest {
+    int x = 0;
+    public int calc() {
+        return x++;
+    }
+}
+
+class RealSpeed extends AbsSpeed {}
+
+public class DemoSpeed {
+
+    static int loops = 1_000_000;
+
+    public static void main(String[] args) {
+
+        SpeedTest iRef = new RealSpeed();
+        AbsSpeed absRef = new RealSpeed();
+        RealSpeed realRef = new RealSpeed();
+
+        long t1 = System.nanoTime();
+        for(int i=0;i<loops;i++) iRef.calc();
+        long t2 = System.nanoTime();
+
+        long t3 = System.nanoTime();
+        for(int i=0;i<loops;i++) absRef.calc();
+        long t4 = System.nanoTime();
+
+        long t5 = System.nanoTime();
+        for(int i=0;i<loops;i++) realRef.calc();
+        long t6 = System.nanoTime();
+
+        System.out.println("Via interface ref = " + (t2-t1));
+        System.out.println("Via abstract ref  = " + (t4-t3));
+        System.out.println("Via concrete ref  = " + (t6-t5));
+    }
+}
+
+
+Typical Output
+
+Interface ref → slowest (but still fast)
+
+Abstract ref → slightly faster
+
+Concrete ref → fastest
+
+Difference is very small (nano/microseconds).

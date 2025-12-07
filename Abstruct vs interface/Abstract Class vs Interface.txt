@@ -1,0 +1,12 @@
+3) Summary Table — Abstract Class vs Interface
+Feature	Abstract Class	Interface
+Methods	Abstract + non-abstract	Abstract (default), static, default
+Variables	Any type, not final	Always public static final
+Constructors	✔ Allowed	❌ Not allowed
+Multiple Inheritance	❌ No	✔ Yes
+Code Reuse	✔ Strong	Limited (default methods only)
+Access Modifiers	private, protected, public	Methods always public
+Suitable For	Closely related classes	Unrelated classes needing common behavior
+Real-Life Example	Car, Bike, Animals	PaymentGateway, Authentication
+Performance	Similar	Similar
+Purpose	Template for sharing code	Contract for rules
