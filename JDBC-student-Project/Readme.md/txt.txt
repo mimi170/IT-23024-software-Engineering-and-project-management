@@ -1,0 +1,13 @@
+# JDBC Student Project
+
+This project demonstrates JDBC connection with MySQL database.
+
+## Features
+- JDBC connection
+- Insert student data
+- View student records
+
+## Tools Used
+- Java
+- MySQL
+- JDBC
