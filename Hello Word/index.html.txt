@@ -1,0 +1,7 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h2>HelloWorld Servlet Demo</h2>
+    <a href="hello">Run Servlet</a>
+</body>
+</html>
