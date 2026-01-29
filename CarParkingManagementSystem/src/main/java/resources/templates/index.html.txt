@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Car Parking System</title>
+</head>
+<body>
+<h2>Car Parking Management System</h2>
+
+<table border="1">
+    <tr>
+        <th>Car ID</th>
+        <th>Car Number</th>
+        <th>Owner Name</th>
+    </tr>
+
+    <tr th:each="p : ${parkingList}">
+        <td th:text="${p.carId}"></td>
+        <td th:text="${p.carNumber}"></td>
+        <td th:text="${p.ownerName}"></td>
+    </tr>
+</table>
+
+</body>
+</html>
